@@ -14,10 +14,12 @@ def read_csv(path):
             country_dict = {key: value for key,value in iterable }
             data.append(country_dict)
 
-            return data 
+        return data 
 
 
 
 if __name__ == '__main__':
     data = read_csv('./Data.csv')
-    print(data[0])
+    for element in data:
+        if element["Country/Territory"] == 'Colombia':
+            print(element)
