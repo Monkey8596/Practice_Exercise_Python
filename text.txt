@@ -1,0 +1,9 @@
+is 
+just
+an
+example
+to
+read
+a
+file
+txt
