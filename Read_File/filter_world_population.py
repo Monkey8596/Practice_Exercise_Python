@@ -1,4 +1,5 @@
 import csv
+import ej_charts
 
 def read_csv(path):
     with open(path,'r') as csvfile:
@@ -20,15 +21,15 @@ def read_csv(path):
 
 if __name__ == '__main__':
     data = read_csv('./Data.csv')
+
+    new_data = list(filter(lambda x:x['Continent']== 'South America', data ))
+    South_america = list(map(lambda x:x['Country/Territory'], new_data ))
     
-    Co = [element for element in data if element["Country/Territory"] == 'Colombia']
-    print(Co)
 
-    # dato2 = list(filter(lambda item: item['Country/Territory'] == 'Colombia', data))
-    # print(dato2)
+    countries = list(map(lambda x:x['Country/Territory'], new_data )) # All Countries 
 
-    # for element in data:
-    #     if element["Country/Territory"] == 'Colombia':
-    #         print(element)
+    percentages = list(map(lambda x:x['World Population Percentage'], new_data )) # Population Percentage
 
-    
+    ej_charts.generate_pie_chart(countries,percentages)
+
+
