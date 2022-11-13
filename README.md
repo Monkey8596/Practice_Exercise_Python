@@ -1,10 +1,26 @@
 # Game Project 
 
-In order to run the game you will need to follow the following comands:
+In order to run the game you will need to follow the comnands on the shell:
+
+``` sh
+
+cd game
+
+python3 main.py
 
 ```
 
-cd game
+# App Project 
+
+``` sh
+
+git clone
+
+cd app
+
+source env/bin/activate
+
+pip3 install -r requirements.txt
 
 python3 main.py
 
